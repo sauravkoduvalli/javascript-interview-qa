@@ -29,7 +29,8 @@ If you found this repository helpful, please give it a **star** ⭐ and share it
 | 2  | [Applications of JavaScript?](#jq2-applications-of-javascript) |
 | 3  | [What are the limitations of JavaScript?](#jq3-what-are-the-limitations-of-javascript) |
 | 4  | [Is JavaScript Compiled or Interpreted or both?](#jq4-is-javascript-compiled-or-interpreted-or-both) |
-| 5  | [What is the difference between `let`, `const`, and `var`?](#q5) |
+| 5  | [What is the difference between `let`, `const`, and `var`?](#jq5-what-is-the-difference-between-let-const-and-var) |
+| 6  | [What are the different data types in JavaScript?](#jq6-what-are-the-different-data-types-in-javascript) |
 
 ---
 
@@ -43,7 +44,7 @@ If you found this repository helpful, please give it a **star** ⭐ and share it
 
 ---
 
-### Q1. What is JavaScript?
+### JQ1. What is JavaScript?
 
 JavaScript is a versatile, dynamically typed programming language used for interactive web applications, supporting both client-side and server-side development.
 
@@ -84,6 +85,109 @@ JavaScript is a versatile, dynamically typed programming language used for inter
 ### Q4. Is JavaScript Compiled or Interpreted or both?
 
 JavaScript is both compiled and interpreted. While JavaScript is fundamentally an interpreted language, JavaScript engines uses **Just-In-Time (JIT)** compilation in modern browsers. This means that the JavaScript code is compiled into machine code at runtime, just before it's executed. This makes JavaScript a compiled and interpreted programming language.
+
+[🔼 Back to top](#-javascript-questions)
+
+
+### Q5. What is the difference between `let`, `const`, and `var`?
+
+In JavaScript, variables are declared using the keywords `let`, `const` or `var`.
+
+-  **Scope**: `var` is function-scoped, while both `let` and `const` are block-scoped (Introduced in JavaScript ES6 version).
+-  **Re-declaration**: `var` redeclared within its scope. While `let` and `const` cannot be redeclared. 
+-  **Re-assignment**: `var` and `let` variables can be reassigned within the same scope. But `const` variables cannot be re-assigned after initialization.
+-  **Modification**: `var` and `let` variables can be modified but `const` variable cannot. However, if a `const` variable holds an object or an array, the contents of that object or array can be modified.
+-  **Hoisting**: variables declared with `var` is hoisted to the top of its scope (function or global). Both `let` and `const` are also hoisted, but they are not initialized.
+
+| Feature       | `var`                          | `let`                           | `const`                          |
+|--------------|--------------------------------|---------------------------------|----------------------------------|
+| Scope        | Function-scoped               | Block-scoped                    | Block-scoped                     |
+| Hoisting     | Hoisted with `undefined`      | Hoisted but not initialized     | Hoisted but not initialized      |
+| Re-declaration | Allowed                      | Not allowed                     | Not allowed                      |
+| Re-assignment | Allowed                      | Allowed                         | Not allowed                      |
+| Mutable      | Yes                            | Yes                             | No (must be initialized)         |
+| Use Case     | Legacy code, avoid using      | Recommended for variables       | Use for constants                |
+   
+
+[🔼 Back to top](#-javascript-questions)
+
+
+### Q6. What are the different data types in JavaScript?
+
+Data Types in JavaScript can be broadly categorized into primitive and non-primitive types.
+
+1) **Primitive Data Type** - Primitive datatypes represent single values and are immutable.
+
+   - Number: Represents numeric values (integers and decimals).
+       
+     ```ts
+     let n = 42;
+     let pi = 3.14;
+     ```
+     
+   - String: Represents text enclosed in single or double quotes.
+       
+     ```ts
+     let s = "Hello, World!";
+     ```
+     
+   - Boolean: Represents a logical value (true or false).
+     
+     ```ts
+     let bool= true;
+     ```
+     
+   - Undefined: A variable that has been declared but not assigned a value.
+    
+     ```ts
+     let notAssigned;
+     console.log(notAssigned);
+     ```
+     
+   - Null: Represents an intentional absence of any value.
+    
+     ```ts
+     let empty = null;
+     ```
+     
+   - Symbol: Represents unique and immutable values, often used as object keys.
+  
+     ```ts
+     let sym = Symbol('unique');
+     ```
+     
+   - BigInt: Represents integers larger than Number.MAX_SAFE_INTEGER.
+  
+     ```ts
+     let bigNumber = 123456789012345678901234567890n;
+     ```
+   
+3) **Non-Primitive Data Type** - Non-primitive types are objects and can store collections of data or more complex entities.
+
+   - Object: Represents key-value pairs.
+       
+     ```ts
+     let obj = {
+       name: "Amit",
+       age: 25
+     };
+     ```
+     
+   - Array: Represents an ordered list of values.
+       
+     ```ts
+     let a = ["red", "green", "blue"];
+     ```
+     
+   - Function: Represents reusable blocks of code.
+       
+     ```ts
+     function fun() {
+        console.log("GeeksforGeeks");
+     }
+     ```
+     
+
 
 [🔼 Back to top](#-javascript-questions)
 
