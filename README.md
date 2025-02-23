@@ -31,6 +31,7 @@ If you found this repository helpful, please give it a **star** ⭐ and share it
 | 4  | [Is JavaScript Compiled or Interpreted or both?](#jq4-is-javascript-compiled-or-interpreted-or-both) |
 | 5  | [What is the difference between `let`, `const`, and `var`?](#jq5-what-is-the-difference-between-let-const-and-var) |
 | 6  | [What are the different data types in JavaScript?](#jq6-what-are-the-different-data-types-in-javascript) |
+| 6  | [Explain the concepts Hoisting and Temporal Dead Zone?](#jq7-explain-the-concepts-hoisting-and-temporal-dead-zone) |
 
 ---
 
@@ -56,7 +57,7 @@ JavaScript is a versatile, dynamically typed programming language used for inter
 [🔼 Back to top](#-javascript-questions)
 
 
-### Q2. Applications of JavaScript?
+### JQ2. Applications of JavaScript?
 
 1) **Front-end development**: Works with HTML and CSS to build interactive and dynamic web pages. (React, Angular, Vue.js)
 2) **Backend Development**: Node.js enables JavaScript to run on the server side. Used to build RESTful APIs, real-time applications, and microservices. (Express.js, NestJS)
@@ -72,7 +73,7 @@ JavaScript is a versatile, dynamically typed programming language used for inter
 [🔼 Back to top](#-javascript-questions)
 
 
-### Q3. What are the limitations of JavaScript?
+### JQ3. What are the limitations of JavaScript?
 
 - **Weak Type Checking**: JavaScript is weakly typed, meaning variables don’t require explicit types. This can lead to runtime errors.
 - **Security Risks**: JavaScript can be used for attacks like Cross-Site Scripting (XSS), where malicious scripts are injected into a website to steal data
@@ -82,14 +83,14 @@ JavaScript is a versatile, dynamically typed programming language used for inter
 [🔼 Back to top](#-javascript-questions)
 
 
-### Q4. Is JavaScript Compiled or Interpreted or both?
+### JQ4. Is JavaScript Compiled or Interpreted or both?
 
 JavaScript is both compiled and interpreted. While JavaScript is fundamentally an interpreted language, JavaScript engines uses **Just-In-Time (JIT)** compilation in modern browsers. This means that the JavaScript code is compiled into machine code at runtime, just before it's executed. This makes JavaScript a compiled and interpreted programming language.
 
 [🔼 Back to top](#-javascript-questions)
 
 
-### Q5. What is the difference between `let`, `const`, and `var`?
+### JQ5. What is the difference between `let`, `const`, and `var`?
 
 In JavaScript, variables are declared using the keywords `let`, `const` or `var`.
 
@@ -112,7 +113,7 @@ In JavaScript, variables are declared using the keywords `let`, `const` or `var`
 [🔼 Back to top](#-javascript-questions)
 
 
-### Q6. What are the different data types in JavaScript?
+### JQ6. What are the different data types in JavaScript?
 
 Data Types in JavaScript can be broadly categorized into primitive and non-primitive types.
 
@@ -173,7 +174,7 @@ Data Types in JavaScript can be broadly categorized into primitive and non-primi
      };
      ```
      
-   - Array: Represents an ordered list of values.
+   - Array: An indexed collection which represents ordered list of values.
        
      ```ts
      let a = ["red", "green", "blue"];
@@ -186,6 +187,18 @@ Data Types in JavaScript can be broadly categorized into primitive and non-primi
         console.log("GeeksforGeeks");
      }
      ```
+
+### JQ7. Explain the concepts Hoisting and Temporal Dead Zone?
+
+**Hoisting** refers to the behaviour where JavaScript moves the declarations of variables, functions, and classes to the top of their scope during the compilation phase. This can sometimes lead to surprising results, especially when using var, let, const, or function expressions.
+
+-   Hoisting applies to variable and function declarations.
+-   Initializations are not hoisted, they are only declarations.
+-   `var` is hoisted to the top of its scope (function or global) and initialized with undefined until assiging a value.
+-   `let` and `const` are also hoisted, but they are not initialized. accessing these varaible will throw `ReferenceError`.
+-   
+
+**Temporal Dead Zone (TDZ)** refers to the period between the entering of a scope (such as a function or block) and the actual initialization of a variable declared with `let` or `const`. During this time, any reference to the variable before its initialization will throw a ReferenceError.
      
 
 
