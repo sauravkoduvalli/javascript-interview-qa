@@ -7,8 +7,6 @@ Welcome to the **JavaScript & TypeScript Interview Questions and Answers** repos
 - [📌 JavaScript Questions](#-javascript-questions)
 - [📌 TypeScript Questions](#-typescript-questions)
 
----
-
 ## 🤝 Contributing
 
 We welcome contributions! 🚀 If you have an interesting JavaScript/TypeScript interview question, feel free to:
@@ -58,6 +56,8 @@ console.log(a); // null
 console.log(b); // undefined
 ```
 
+[🔼 Back to top](#-javascript-questions)
+
 ---
 
 ### Q2: Explain event delegation in JavaScript. {#q2}
@@ -73,9 +73,9 @@ document.getElementById("parent").addEventListener("click", function (event) {
 });
 ```
 
+[🔼 Back to top](#-javascript-questions)
+
 ---
-
-
 
 ### TQ1: What are TypeScript interfaces? {#tq1}
 
@@ -91,3 +91,4 @@ interface Person {
 const user: Person = { name: "John", age: 30 };
 ```
 
+[🔼 Back to top](#-typescript-questions)
