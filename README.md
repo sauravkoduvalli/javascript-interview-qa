@@ -1,11 +1,6 @@
 # 🚀 JavaScript & TypeScript Interview Questions and Answers
 
-Welcome to the **JavaScript & TypeScript Interview Questions and Answers** repository! This collection is designed to help developers prepare for technical interviews by covering essential concepts, tricky questions, and expert answers. 🌟
-
-## 📜 Table of Contents
-
-- [📌 JavaScript Questions](#-javascript-questions)
-- [📌 TypeScript Questions](#-typescript-questions)
+Welcome to the **JavaScript Interview Questions and Answers** repository! This collection is designed to help developers prepare for technical interviews by covering essential concepts, tricky questions, and expert answers. 🌟
 
 ## 🤝 Contributing
 
@@ -32,16 +27,6 @@ If you found this repository helpful, please give it a **star** ⭐ and share it
 | 5  | [What is the difference between `let`, `const`, and `var`?](#jq5-what-is-the-difference-between-let-const-and-var) |
 | 6  | [What are the different data types in JavaScript?](#jq6-what-are-the-different-data-types-in-javascript) |
 | 6  | [Explain the concepts Hoisting and Temporal Dead Zone?](#jq7-explain-the-concepts-hoisting-and-temporal-dead-zone) |
-
----
-
-## 📌 TypeScript Questions
-
-| #  | Question |
-|----|----------|
-| 1  | [What are TypeScript interfaces?](#tq1) |
-| 2  | [Explain TypeScript generics with an example.](#tq2) |
-| 3  | [What is the `readonly` modifier in TypeScript?](#tq3) |
 
 ---
 
@@ -196,27 +181,7 @@ Data Types in JavaScript can be broadly categorized into primitive and non-primi
 -   Initializations are not hoisted, they are only declarations.
 -   `var` is hoisted to the top of its scope (function or global) and initialized with undefined until assiging a value.
 -   `let` and `const` are also hoisted, but they are not initialized. accessing these varaible will throw `ReferenceError`.
--   
 
 **Temporal Dead Zone (TDZ)** refers to the period between the entering of a scope (such as a function or block) and the actual initialization of a variable declared with `let` or `const`. During this time, any reference to the variable before its initialization will throw a ReferenceError.
      
-
-
 [🔼 Back to top](#-javascript-questions)
-
----
-
-### TQ1. What are TypeScript interfaces?
-
-Interfaces define the structure of an object and ensure type safety. Example:
-
-```ts
-interface Person {
-  name: string;
-  age: number;
-}
-
-const user: Person = { name: "John", age: 30 };
-```
-
-[🔼 Back to top](#-typescript-questions)
